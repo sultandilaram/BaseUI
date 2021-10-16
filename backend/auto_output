@@ -1,0 +1,66 @@
+
+    
+    class Information(Base):
+        __tablename__ = 'informations'
+        id = Column(Integer, primary_key=True)
+            name = Column(String(255), nullable=False, unique=True) 
+
+
+        def __repr__(self) -> str:
+            return f'<Information name={self.name}>'
+    
+    
+    class Information(BaseModel):
+        id: int
+        name:str 
+
+        class Config:
+            orm_mode = True
+    
+    
+    @app.get('/information', tags=['Information'], response_model=List[Information], status_code=status.HTTP_200_OK)
+    async def information_list():
+        return db.query(models.Information).all()
+
+    @app.get('/information/{id}', tags=['Information'], response_model=Information, status_code=status.HTTP_200_OK)
+    async def get_information(id: int):
+        return db.query(models.Information).filter(models.Information.id == id).first()
+    
+    
+    @app.post('/information', tags=['Information'], response_model=Information, status_code=status.HTTP_201_CREATED)
+    async def add_information(
+    name: str = Form(...),):
+        db_information = models.Information(
+    name=name,
+        )
+
+        db.add(db_information)
+        db.commit()
+
+        return db_information
+    
+    
+    @app.put('/information', tags=['Information'], response_model=Information, status_code=status.HTTP_200_OK)
+    async def update_information(information: Information):
+        db_information = db.query(models.Information).filter(
+            models.Information.id == information.id).first()
+        if db_information==None:
+            raise HTTPException(
+                status_code=status.status.HTTP_422_UNPROCESSABLE_ENTITY, detail='Information does not exist.')
+        db_information.name = information.name
+
+        db.commit()
+        return db_information
+    
+    
+    @app.delete('/information/{id}', tags=['Information'])
+    async def delete_information(id: int):
+        db_information = get_information(id)
+        if db_information==None:
+            raise HTTPException(
+                status_code=status.status.HTTP_422_UNPROCESSABLE_ENTITY, detail='Information does not exist.')
+        db.delete(db_information)
+        db.commit()
+        return status.HTTP_200_OK
+    
+    
