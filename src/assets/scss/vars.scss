@@ -1,0 +1,99 @@
+:root {
+  //  Theme Colors
+  --header-height: 2rem;
+
+  --hue-color: 250;
+  --primary-hue: 217; // BLue
+  --secondary-hue: 250; // Purple
+  --success-hue: 144; // Green
+  --danger-hue: 350; // Red
+  --warning-hue: 40; // Yellow
+  --info-hue: 195; // Light Blue
+
+  --primary-color: hsl(var(--primary-hue), 89%, 51%);
+  --primary-color-hover: hsl(var(--primary-hue), 89%, 45%);
+
+  --secondary-color: hsl(var(--secondary-hue), 69%, 61%);
+  --secondary-color-hover: hsl(var(--secondary-hue), 69%, 55%);
+
+  --success-color: hsl(var(--success-hue), 100%, 36%);
+  --success-color-hover: hsl(var(--success-hue), 100%, 30%);
+
+  --danger-color: hsl(var(--danger-hue), 94%, 58%);
+  --danger-color-hover: hsl(var(--danger-hue), 94%, 52%);
+
+  --warning-color: hsl(var(--warning-hue), 100%, 50%);
+  --warning-color-hover: hsl(var(--warning-hue), 100%, 44%);
+
+  --info-color: hsl(var(--info-hue), 83%, 58%);
+  --info-color-hover: hsl(var(--info-hue), 83%, 46%);
+
+  --light-color: hsl(0, 0%, 98%);
+  --light-color-hover: hsl(0, 0%, 95%);
+
+  --dark-color: hsl(0, 0%, 15%);
+  --dark-color-hover: hsl(0, 0%, 10%);
+
+  --title-color: var(--dark-color);
+  --text-color: hsl(0, 0%, 25%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --text-color-disabled: hsl(0, 0%, 50%);
+
+  --border-color: hsl(0, 0%, 79%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(var(--hue-color), 0%, 99%);
+  --container-color: #fff;
+
+  body.dark {
+    --title-color: var(--light-color);
+    --text-color: hsl(0, 0%, 75%);
+    --input-color: hsl(var(--hue-color), 29%, 16%);
+    --body-color: hsl(var(--hue-color), 28%, 12%);
+    --container-color: hsl(var(--hue-color), 29%, 16%);
+
+    --border-color: hsl(0, 0%, 21%);
+  }
+
+  --box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.25);
+  --box-shadow-inset: inset 0px 0px 10px 0px hsla(0, 0%, 0%, 0.25);
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 5px rgba(0,0,0,0.24);
+
+  --body-neumor-inset: inset 5px 5px 10px hsl(var(--hue-color), 26%, 7%),
+    inset -5px -5px 10px hsl(var(--hue-color), 29%, 16%);
+  --body-neumor-high: 5px 5px 10px hsl(var(--hue-color), 28%, 5%),
+    -5px -5px 10px hsl(var(--hue-color), 28%, 19%);
+
+  //========== Box ==========
+  --border-radius: .5rem;
+
+  //========== Font and typography ==========
+  --font-family: "Poppins", sans-serif;
+
+  // Font Size
+  --font-big: 3rem;
+  --h1-size: 2.25rem;
+  --h2-size: 1.5rem;
+  --h3-size: 1.25rem;
+  --font-size: 1rem;
+  --font-small: 0.875rem;
+  --font-smaller: 0.813rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+
+  @media screen and (max-width: 968px) {
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+  }
+}

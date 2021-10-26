@@ -1,0 +1,885 @@
+<app-header navBrand="Nav Brand">
+  <nav-item link="">Home</nav-item>
+  <nav-item link="/docs">Documentation</nav-item>
+  <nav-item link="" [disabled]="true">Disabled</nav-item>
+</app-header>
+
+<div class="header m-t-5" style="position: relative; z-index: initial">
+  <h1 class="title">Documentation</h1>
+  <p class="section-subtitle">See what this UI kit contains</p>
+</div>
+
+<section class="section container">
+  <h1 class="section-title">Carousel</h1>
+</section>
+
+<section class="section container">
+  <h1 class="section-title">Layout</h1>
+
+  <h3 class="heading m-t-1">Grid System</h3>
+  <div class="d-grid" style="grid-template-columns: repeat(4, 1fr)">
+    <span
+      class="section-subtitle m-b-0"
+      style="grid-column: 1 / span 4; grid-row: 1"
+      >.d-grid {{ "{grid-template-columns: repeat(4, 1fr)}" }}
+    </span>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-shadow
+        bg-primary
+        text-light
+      "
+      style="grid-column: 1 / span 2; grid-row: 2"
+    >
+      grid-row: 1; grid-column: 1/ span 2;}
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-shadow
+        bg-primary
+        text-light
+      "
+      style="grid-row: 2"
+    >
+      grid-row: 1;
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-shadow
+        bg-primary
+        text-light
+      "
+      style="grid-row: 2 / span 2"
+    >
+      grid-row: 1/ span 2;
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-shadow
+        bg-primary
+        text-light
+      "
+      style="grid-row: 3"
+    >
+      grid-row: 2;
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-shadow
+        bg-primary
+        text-light
+      "
+      style="grid-row: 3"
+    >
+      grid-row: 2;
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-shadow
+        bg-primary
+        text-light
+      "
+      style="grid-row: 3"
+    >
+      grid-row: 2;
+    </div>
+  </div>
+
+  <h3 class="heading m-t-1">Flex System</h3>
+  <div class="d-flex flex-wrap justify-content-center">
+    <span class="section-subtitle m-b-0 flex-noshrink" style="width: 100%"
+      >.d-flex .flex-wrap</span
+    >
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-shadow
+        bg-primary
+        text-light
+      "
+      style="width: calc(25% - 0.5rem)"
+    >
+      Flex Item
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-shadow
+        bg-primary
+        text-light
+      "
+      style="width: calc(25% - 0.5rem)"
+    >
+      Flex Item
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-shadow
+        bg-primary
+        text-light
+      "
+      style="width: calc(25% - 0.5rem)"
+    >
+      Flex Item
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-shadow
+        bg-primary
+        text-light
+      "
+      style="width: calc(25% - 0.5rem)"
+    >
+      Flex Item
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-shadow
+        bg-primary
+        text-light
+      "
+      style="width: calc(25% - 0.5rem)"
+    >
+      Flex Item
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-shadow
+        bg-primary
+        text-light
+      "
+      style="width: calc(25% - 0.5rem)"
+    >
+      Flex Item
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-shadow
+        bg-primary
+        text-light
+      "
+      style="width: calc(25% - 0.5rem)"
+    >
+      Flex Item
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-shadow
+        bg-primary
+        text-light
+      "
+      style="width: calc(25% - 0.5rem)"
+    >
+      Flex Item
+    </div>
+  </div>
+
+  <h3 class="heading m-t-1">Container</h3>
+  <div
+    class="
+      container
+      bg-primary
+      p-1
+      d-flex
+      justify-content-center
+      text-light
+      box-shadow
+    "
+  >
+    .container (max-width: 1100px;)
+  </div>
+
+  <h3 class="heading m-t-1">Container Fluid</h3>
+  <div
+    class="
+      container-fluid
+      bg-primary
+      p-1
+      d-flex
+      justify-content-center
+      text-light
+      box-shadow
+    "
+  >
+    .container-fluid (width: 100%;)
+  </div>
+</section>
+
+<section class="section container">
+  <h1 class="section-title">Colors</h1>
+
+  <h3 class="heading">Background Colors</h3>
+  <div class="d-grid" style="grid-template-columns: repeat(4, 1fr)">
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded box-shadow
+        bg-primary
+        hover-primary
+        text-light
+      "
+    >
+      .bg-primary
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded box-shadow
+        bg-secondary
+        hover-secondary
+        text-light
+      "
+    >
+      .bg-secondary
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded box-shadow
+        bg-success
+        hover-success
+        text-light
+      "
+    >
+      .bg-success
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded box-shadow
+        bg-danger
+        hover-danger
+        text-light
+      "
+    >
+      .bg-danger
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded box-shadow
+        bg-warning
+        hover-warning
+        text-light
+      "
+    >
+      .bg-warning
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded box-shadow
+        bg-info
+        hover-info
+        text-light
+      "
+    >
+      .bg-info
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded box-shadow
+        bg-light
+        hover-light
+        text-dark
+      "
+    >
+      .bg-light
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded box-shadow
+        bg-dark
+        hover-dark
+        text-light
+      "
+    >
+      .bg-dark
+    </div>
+  </div>
+
+  <h3 class="heading m-t-1">Text Colors</h3>
+  <div class="d-grid" style="grid-template-columns: repeat(4, 1fr)">
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded
+        bg-light
+        text-primary
+      "
+    >
+      .text-primary
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded
+        bg-light
+        text-secondary
+      "
+    >
+      .text-secondary
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded
+        bg-light
+        text-success
+      "
+    >
+      .text-success
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded
+        bg-light
+        text-danger
+      "
+    >
+      .text-danger
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded
+        bg-light
+        text-warning
+      "
+    >
+      .text-warning
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded
+        bg-light
+        text-info
+      "
+    >
+      .text-info
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded
+        bg-dark
+        text-light
+      "
+    >
+      .text-light
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded
+        bg-light
+        text-dark
+      "
+    >
+      .text-dark
+    </div>
+  </div>
+
+  <h3 class="heading m-t-1">Link Colors</h3>
+  <div class="d-grid" style="grid-template-columns: repeat(4, 1fr)">
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded
+        bg-light
+      "
+    >
+      <a href="#" class="link-primary">.link-primary</a>
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded
+        bg-light
+      "
+    >
+      <a href="#" class="link-secondary">.link-secondary</a>
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded
+        bg-light
+      "
+    >
+      <a href="#" class="link-success">.link-success</a>
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded
+        bg-light
+      "
+    >
+      <a href="#" class="link-danger">.link-danger</a>
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded
+        bg-light
+      "
+    >
+      <a href="#" class="link-warning">.link-warning</a>
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded
+        bg-light
+      "
+    >
+      <a href="#" class="link-info">.link-info</a>
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded
+        bg-dark
+      "
+    >
+      <a href="#" class="link-light">.link-light</a>
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded
+        bg-light
+      "
+    >
+      <a href="#" class="link-dark">.link-dark</a>
+    </div>
+  </div>
+
+  <h3 class="heading m-t-1">Shaodws</h3>
+  <div class="d-grid" style="grid-template-columns: repeat(2, 1fr)">
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded box-shadow
+        bg-light
+        text-dark
+      "
+    >
+      .box-shadow
+    </div>
+    <div
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        box box-rounded
+        bg-light
+        text-dark
+      "
+    >
+      <div
+        class="
+          d-flex
+          justify-content-center
+          align-items-center
+          box box-rounded
+          neumorphic
+          text-dark
+        "
+      >
+        .neumorphic
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section container">
+  <h1 class="section-title">Typography</h1>
+
+  <div
+    class="d-grid border-1 p-1 m-t-1"
+    style="grid-template-columns: repeat(3, 1fr)"
+  >
+    <h1 class="title border-b-1" style="grid-column: 1 / span 3; grid-row: 1">
+      .title
+    </h1>
+    <h1 class="section-title" style="grid-column: 1 / span 3; grid-row: 2">
+      .section-title
+    </h1>
+    <span class="section-subtitle" style="grid-column: 1 / span 3; grid-row: 3"
+      >.section-subtitle</span
+    >
+    <div class="bg-primary box" style="grid-column: 1; grid-row: 4">
+      <h3 class="heading text-light">.heading</h3>
+      <h3 class="subheading text-light border-b-1 border-color-loght">
+        .subheading
+      </h3>
+      <p class="text-light">Normal Text</p>
+    </div>
+    <div class="bg-primary box" style="grid-column: 2; grid-row: 4">
+      <h3 class="heading text-light">.heading</h3>
+      <h3 class="subheading text-light border-b-1 border-color-loght">
+        .subheading
+      </h3>
+      <p class="text-light">Normal Text</p>
+    </div>
+    <div class="bg-primary box" style="grid-column: 3; grid-row: 4">
+      <h3 class="heading text-light">.heading</h3>
+      <h3 class="subheading text-light border-b-1 border-color-loght">
+        .subheading
+      </h3>
+      <p class="text-light">Normal Text</p>
+    </div>
+  </div>
+</section>
+
+<section class="section container">
+  <h1 class="section-title">Components</h1>
+
+  <h3 class="heading m-t-1">Accordions</h3>
+  <div class="d-grid" style="grid-template-columns: repeat(2, 1fr)">
+    <div>
+      <span class="section-subtitle m-b-0">Normal Accordion</span>
+      <accordion>
+        <accordion-item title="Accordion 1">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, aut
+          aperiam aliquam similique sed veritatis. Necessitatibus quisquam dolor
+          vitae quia doloremque recusandae, hic commodi vero expedita unde, id
+          maiores et.
+        </accordion-item>
+        <accordion-item title="Accordion 2">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, aut
+          aperiam aliquam similique sed veritatis. Necessitatibus quisquam dolor
+          vitae quia doloremque recusandae, hic commodi vero expedita unde, id
+          maiores et.
+        </accordion-item>
+      </accordion>
+    </div>
+    <div>
+      <span class="section-subtitle m-b-0">Accordion with [multiple]=true</span>
+      <accordion [multiple]="true">
+        <accordion-item title="Accordion 1">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, aut
+          aperiam aliquam similique sed veritatis. Necessitatibus quisquam dolor
+          vitae quia doloremque recusandae, hic commodi vero expedita unde, id
+          maiores et.
+        </accordion-item>
+        <accordion-item title="Accordion 2">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, aut
+          aperiam aliquam similique sed veritatis. Necessitatibus quisquam dolor
+          vitae quia doloremque recusandae, hic commodi vero expedita unde, id
+          maiores et.
+        </accordion-item>
+      </accordion>
+    </div>
+  </div>
+
+  <h3 class="heading m-t-5">Buttons</h3>
+  <div class="d-flex flex-wrap justify-content-center">
+    <button class="btn btn-primary">.btn-primary</button>
+    <button class="btn btn-secondary">.btn-secondary</button>
+    <button class="btn btn-success">.btn-success</button>
+    <button class="btn btn-danger">.btn-danger</button>
+    <button class="btn btn-warning">.btn-warning</button>
+    <button class="btn btn-info">.btn-info</button>
+    <button class="btn btn-light">.btn-light</button>
+    <button class="btn btn-dark">.btn-dark</button>
+  </div>
+
+  <h3 class="heading m-t-1">Button Group</h3>
+  <div class="d-flex justify-content-center">
+    <div class="btn-group">
+      <button class="btn btn-primary">Left</button>
+      <button class="btn btn-primary">Middle</button>
+      <button class="btn btn-primary">Right</button>
+    </div>
+  </div>
+
+  <h3 class="heading m-t-1">Dropdown</h3>
+  <div class="d-grid justify-content-center" style="grid-template-columns: repeat(4, 1fr);">
+    <dropdown value="Primary Dropdown" color="primary">
+      <li>Dropdown Item</li>
+      <li>Dropdown Item</li>
+    </dropdown>
+    <dropdown value="Secondary Dropdown" color="secondary">
+      <li>Dropdown Item</li>
+      <li>Dropdown Item</li>
+    </dropdown>
+    <dropdown value="Success Dropdown" color="success">
+      <li>Dropdown Item</li>
+      <li>Dropdown Item</li>
+    </dropdown>
+    <dropdown value="Danger Dropdown" color="danger">
+      <li>Dropdown Item</li>
+      <li>Dropdown Item</li>
+    </dropdown>
+    <dropdown value="Warning Dropdown" color="warning">
+      <li>Dropdown Item</li>
+      <li>Dropdown Item</li>
+    </dropdown>
+    <dropdown value="Info Dropdown" color="info">
+      <li>Dropdown Item</li>
+      <li>Dropdown Item</li>
+    </dropdown>
+    <dropdown value="Light Dropdown" color="light">
+      <li>Dropdown Item</li>
+      <li>Dropdown Item</li>
+    </dropdown>
+    <dropdown value="Dark Dropdown" color="dark">
+      <li>Dropdown Item</li>
+      <li>Dropdown Item</li>
+    </dropdown>
+  </div>
+</section>
+
+<section class="section container">
+  <h1 class="section-title">Alerts</h1>
+</section>
+
+<section class="section container">
+  <h1 class="section-title">Cards</h1>
+  <div class="d-flex">
+    <div>
+      <span class="section-subtitle m-b-0">With Header and Footer</span>
+      <card>
+        <card-header>Card Header</card-header>
+        <card-body>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            nostrum nisi voluptatibus vel aperiam deleniti repudiandae, quasi
+            corrupti velit quia tempore assumenda itaque ipsam repellendus
+            ducimus modi, error, at praesentium.
+          </p>
+        </card-body>
+        <card-footer>Card Footer</card-footer>
+      </card>
+    </div>
+    <div>
+      <span class="section-subtitle m-b-0">Without Header and Footer</span>
+      <card>
+        <card-body>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            nostrum nisi voluptatibus vel aperiam deleniti repudiandae, quasi
+            corrupti velit quia tempore assumenda itaque ipsam repellendus
+            ducimus modi, error, at praesentium.
+          </p>
+          <button class="btn btn-primary m-t-1">Button</button>
+        </card-body>
+      </card>
+    </div>
+  </div>
+
+  <h3 class="heading m-t-1">Card Colors</h3>
+  <div class="d-grid m-t-2" style="grid-template-columns: repeat(4, 1fr)">
+    <card color="primary">
+      <card-header>Card Header</card-header>
+      <card-body>
+        <p>color="primary"</p>
+      </card-body>
+      <card-footer>Card Footer</card-footer>
+    </card>
+    <card color="secondary">
+      <card-header>Card Header</card-header>
+      <card-body>
+        <p>color="secondary"</p>
+      </card-body>
+      <card-footer>Card Footer</card-footer>
+    </card>
+    <card color="success">
+      <card-header>Card Header</card-header>
+      <card-body>
+        <p>color="success"</p>
+      </card-body>
+      <card-footer>Card Footer</card-footer>
+    </card>
+    <card color="danger">
+      <card-header>Card Header</card-header>
+      <card-body>
+        <p>color="danger"</p>
+      </card-body>
+      <card-footer>Card Footer</card-footer>
+    </card>
+    <card color="warning">
+      <card-header>Card Header</card-header>
+      <card-body>
+        <p>color="warning"</p>
+      </card-body>
+      <card-footer>Card Footer</card-footer>
+    </card>
+    <card color="info">
+      <card-header>Card Header</card-header>
+      <card-body>
+        <p>color="info"</p>
+      </card-body>
+      <card-footer>Card Footer</card-footer>
+    </card>
+    <card color="light">
+      <card-header>Card Header</card-header>
+      <card-body>
+        <p>color="light"</p>
+      </card-body>
+      <card-footer>Card Footer</card-footer>
+    </card>
+    <card color="dark">
+      <card-header>Card Header</card-header>
+      <card-body>
+        <p>color="dark"</p>
+      </card-body>
+      <card-footer>Card Footer</card-footer>
+    </card>
+  </div>
+</section>
+
+<section class="section container d-flex flex-dir-column align-items-center">
+  <h1 class="section-title">Modals</h1>
+
+  <button class="btn btn-primary" (click)="myModal.toggle()">
+    launch demo modal
+  </button>
+
+  <modal #myModal>
+    <modal-header> Modal Title </modal-header>
+    <modal-body>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
+      consectetur ipsam ipsum fugiat dolorem fugit nemo atque inventore.
+      Possimus modi reiciendis placeat ducimus veritatis animi dignissimos
+      tempore voluptates nulla quos!
+    </modal-body>
+    <modal-footer>
+      <button class="btn btn-danger" (click)="myModal.toggle()">Close</button>
+      <button class="btn btn-primary">Save</button>
+    </modal-footer>
+  </modal>
+</section>
+
+<section class="section container">
+  <h1 class="section-title">Dynamic Forms</h1>
+  <div class="d-flex justify-content-center">
+    <app-form submitText="Submit">
+      <form-input name="text" type="text">
+        <form-label>Text Input</form-label>
+      </form-input>
+      <form-input name="password" type="password">
+        <form-label>Password Input</form-label>
+      </form-input>
+      <form-input name="email" type="email">
+        <form-label>Email Input</form-label>
+      </form-input>
+      <form-input name="number" type="number" [value]="0">
+        <form-label>NumberInput</form-label>
+      </form-input>
+      <radio-input name="radio">
+        <form-label>Radio Input</form-label>
+        <radio-option value="option1"> Option 1 </radio-option>
+        <radio-option value="option2" [selected]="true">
+          Option 2
+        </radio-option>
+        <radio-option value="option3"> Option 3 </radio-option>
+      </radio-input>
+      <form-textarea name="textarea">
+        <form-label>Textarea</form-label>
+      </form-textarea>
+      <form-select [multiple]="true" [clearable]="true">
+        <form-label>Select</form-label>
+      </form-select>
+    </app-form>
+  </div>
+</section>
+
+<!-- <app-footer [footer]="footer"></app-footer> -->

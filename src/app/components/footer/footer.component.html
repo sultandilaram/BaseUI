@@ -1,0 +1,24 @@
+<footer *ngIf="footer" class="footer">
+    <div class="container d-grid">
+        <div>
+            <h1 class="section-title text-light">{{footer.title}}</h1>
+            <h1 *ngIf="footer.subtitle" class="section-subtitle text-light">{{footer.subtitle}}</h1>
+        </div>
+
+        <ul *ngIf="footer.links && footer.links.length > 0" class="footer-links">
+            <li *ngFor="let link of footer.links" >
+                <a [routerLink]="link.link" class="footer-link">{{link.value}}</a>
+            </li>
+        </ul>
+
+        <ul *ngIf="footer.alt_links && footer.alt_links.length > 0" class="footer-links">
+          <li *ngFor="let link of footer.alt_links" >
+              <a [routerLink]="link.link" class="footer-link">{{link.value}}</a>
+          </li>
+        </ul>
+    </div>
+
+    <p class="footer-copy">
+      {{ footer.copyright }} &copy;
+    </p>
+</footer>
