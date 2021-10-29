@@ -6,7 +6,7 @@ import { ModalHeaderComponent } from './modal-header.component';
   selector: 'modal',
   template: `
     <div class="modal-base d-flex content-center items-center" [@fade]="modal_state?'final':'initial'">
-      <div class="modal-container container box-rounded b-1 bg-light">
+      <div class="modal-container container box-rounded b-1">
         <ng-content select="modal-header"></ng-content>
         <ng-content select="modal-body"></ng-content>
         <ng-content select="modal-footer"></ng-content>
@@ -26,6 +26,7 @@ import { ModalHeaderComponent } from './modal-header.component';
           z-index: var(--z-modal);
         }
         &-container{
+          background-color: var(--body-color);
           position: relative;
           height: max-content;
           min-width: 500px;
