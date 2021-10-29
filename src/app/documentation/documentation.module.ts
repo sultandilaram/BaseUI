@@ -14,6 +14,7 @@ import { DropdownsComponent } from './components/dropdowns/dropdowns.component';
 import { DropdownModule } from '../modules/dropdown/dropdown.module';
 import { CardsComponent } from './components/cards/cards.component';
 import { CardsModule } from '../modules/cards/cards.module';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 
@@ -27,7 +28,7 @@ import { CardsModule } from '../modules/cards/cards.module';
     AccordionComponent,
     ButtonsComponent,
     DropdownsComponent,
-    CardsComponent
+    CardsComponent,
   ],
   imports: [
     CommonModule,
@@ -35,7 +36,7 @@ import { CardsModule } from '../modules/cards/cards.module';
     SidebarModule,
     AccordionModule,
     DropdownModule,
-    CardsModule
+    CardsModule,
   ]
 })
 export class DocumentationModule { }

@@ -6,7 +6,7 @@ import { CardHeaderComponent } from './card-header.component';
 @Component({
   selector: 'card',
   template: `
-    <div class="card box-rounded bg-{{color}}">
+    <div class="card box-rounded neumorphic bg-{{color}}">
       <ng-content select="card-header"></ng-content>
       <ng-content select="card-body"></ng-content>
       <ng-content select="card-footer"></ng-content>
@@ -18,7 +18,6 @@ import { CardHeaderComponent } from './card-header.component';
     `,
     `
       .card {
-        box-shadow: var(--card-shadow);
         height: max-content;
         overflow: hidden;
       }
