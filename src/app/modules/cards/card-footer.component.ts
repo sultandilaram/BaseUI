@@ -6,17 +6,7 @@ import { Component } from '@angular/core';
     <div class="card-footer b-t-1 p-1 d-flex content-center {{custom_class}}">
       <ng-content></ng-content>
     </div>
-  `,
-  styles: [
-    `
-      @import '../../../assets/scss/vars.scss';
-    `,
-    `
-      .card-footer {
-        background-color: var(--light-color);
-      }
-    `,
-  ]
+  `
 })
 export class CardFooterComponent {
 
@@ -25,7 +15,7 @@ export class CardFooterComponent {
   constructor() { }
 
   changeColor(color:string): void {
-    this.custom_class = color=='light'?'bg-'+color+" text-dark" : color=='dark'? 'bg-'+color+' text-light' : 'bg-'+color+' text-light b-color-'+color
+    this.custom_class = color=='light'?'bg-'+color+" text-dark" : color=='dark'? 'text-light' : 'text-light b-color-'+color
   }
 
 }

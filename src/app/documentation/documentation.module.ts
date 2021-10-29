@@ -12,6 +12,8 @@ import { ButtonsComponent } from './components/buttons/buttons.component';
 import { AccordionModule } from '../modules/accordion/accordion.module';
 import { DropdownsComponent } from './components/dropdowns/dropdowns.component';
 import { DropdownModule } from '../modules/dropdown/dropdown.module';
+import { CardsComponent } from './components/cards/cards.component';
+import { CardsModule } from '../modules/cards/cards.module';
 
 
 
@@ -24,14 +26,16 @@ import { DropdownModule } from '../modules/dropdown/dropdown.module';
     TypographyComponent,
     AccordionComponent,
     ButtonsComponent,
-    DropdownsComponent
+    DropdownsComponent,
+    CardsComponent
   ],
   imports: [
     CommonModule,
     DocRoutingModule,
     SidebarModule,
     AccordionModule,
-    DropdownModule
+    DropdownModule,
+    CardsModule
   ]
 })
 export class DocumentationModule { }

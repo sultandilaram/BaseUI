@@ -115,7 +115,7 @@ img {
 }
 // Container almost same as bootstrap
 .container {
-  max-width: 1500px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   &-fluid {
@@ -378,13 +378,7 @@ img {
 
 
 //========== Breakpoints
-@media screen and (max-width: 1800px) {
-  .container {
-    max-width: 1300px;
-  }
-}
-
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1200px) {
   .container {
     margin-left: 1.5rem;
     margin-right: 1.5rem;

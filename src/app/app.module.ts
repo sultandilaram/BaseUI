@@ -6,7 +6,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { TestComponent } from './test/test.component';
 import { HeaderModule } from './modules/header/header.module';
 import { AlertsModule } from './modules/alerts/alerts.module';
-import { CardsModule } from './modules/cards/cards.module';
 import { ModalModule } from './modules/modal/modal.module';
 import { FormModule } from './modules/form/form.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,7 +22,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HeaderModule,
     AlertsModule,
-    CardsModule,
     ModalModule,
     FormModule
   ],

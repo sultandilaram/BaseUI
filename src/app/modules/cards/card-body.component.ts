@@ -7,16 +7,6 @@ import { Component } from '@angular/core';
       <ng-content></ng-content>
     </div>
   `,
-  styles: [
-    `
-      @import '../../../assets/scss/vars.scss';
-    `,
-    `
-      .card-body {
-        background-color: var(--light-color);
-      }
-    `,
-  ]
 })
 export class CardBodyComponent {
 
@@ -25,7 +15,7 @@ export class CardBodyComponent {
   constructor() { }
 
   changeColor(color:string): void {
-    this.custom_class = color!='light'?'bg-'+color+" text-light":'bg-'+color+" text-dark"
+    this.custom_class = color!='light'?"text-light":"text-dark"
   }
 
 }

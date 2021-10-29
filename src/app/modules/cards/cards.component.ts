@@ -6,7 +6,7 @@ import { CardHeaderComponent } from './card-header.component';
 @Component({
   selector: 'card',
   template: `
-    <div class="card box-rounded">
+    <div class="card box-rounded bg-{{color}}">
       <ng-content select="card-header"></ng-content>
       <ng-content select="card-body"></ng-content>
       <ng-content select="card-footer"></ng-content>
