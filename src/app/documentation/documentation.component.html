@@ -1,0 +1,19 @@
+<div class="body">
+  <sidebar [title]="'BaseKit'">
+    <sidebar-item link="">Getting Started</sidebar-item>
+    <sidebar-item link="layouts">Layouts</sidebar-item>
+    <sidebar-item link="colors">Colors</sidebar-item>
+    <sidebar-item link="typography">Typography</sidebar-item>
+    <sidebar-dropdown label="Components">
+      <sidebar-item link="accordion">Accordion</sidebar-item>
+      <sidebar-item link="buttons">Buttons</sidebar-item>
+      <sidebar-item link="buttons">Dropdowns</sidebar-item>
+      <sidebar-item link="cards">Cards</sidebar-item>
+      <sidebar-item link="modal">Modal</sidebar-item>
+    </sidebar-dropdown>
+    <sidebar-item link="forms">Forms</sidebar-item>
+  </sidebar>
+  <main class="main">
+    <router-outlet></router-outlet>
+  </main>
+</div>

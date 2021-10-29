@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'card-footer',
   template: `
-    <div class="card-footer border-t-1 p-1 d-flex justify-content-center {{custom_class}}">
+    <div class="card-footer b-t-1 p-1 d-flex content-center {{custom_class}}">
       <ng-content></ng-content>
     </div>
   `,
@@ -25,7 +25,7 @@ export class CardFooterComponent {
   constructor() { }
 
   changeColor(color:string): void {
-    this.custom_class = color=='light'?'bg-'+color+" text-dark" : color=='dark'? 'bg-'+color+' text-light' : 'bg-'+color+' text-light border-color-'+color
+    this.custom_class = color=='light'?'bg-'+color+" text-dark" : color=='dark'? 'bg-'+color+' text-light' : 'bg-'+color+' text-light b-color-'+color
   }
 
 }

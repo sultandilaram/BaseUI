@@ -14,7 +14,6 @@ import { Component, Input, OnInit } from '@angular/core';
       </a>
     </li>
   `,
-  styleUrls: ['./nav-item.component.scss'],
 })
 export class NavItemComponent implements OnInit {
   @Input() link: string;

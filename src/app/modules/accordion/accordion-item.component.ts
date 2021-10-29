@@ -11,7 +11,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
   selector: 'accordion-item',
   template: `
     <div
-      class="header p-1 border-b-1 d-flex align-items-center"
+      class="accordion-header p-1 b-b-1 d-flex items-center"
       (click)="toggleEmit()"
     >
       <div class="accordion-title">{{ title }}</div>
@@ -21,7 +21,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
       ></i>
     </div>
     <div [@collapse]="!show ? 'initial' : 'final'">
-      <div class="body p-1 border-b-1 d-flex">
+      <div class="accordion-body p-1 b-b-1 d-flex">
         <ng-content></ng-content>
       </div>
     </div>
@@ -31,7 +31,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
       @import '../../../assets/scss/vars.scss';
     `,
     `
-      .header {
+      .accordion-header {
         min-height: 2rem;
         cursor: pointer;
 
@@ -43,7 +43,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
         }
       }
 
-      .body {
+      .accordion-body {
         min-height: 2rem;
       }
     `,

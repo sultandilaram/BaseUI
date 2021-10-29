@@ -2,7 +2,6 @@
 @import "https://unicons.iconscout.com/release/v4.0.0/css/line.css";
 @import "./assets/scss/vars.scss";
 
-
 //========== BASE ==========
 * {
   box-sizing: border-box;
@@ -38,613 +37,250 @@ img {
 }
 
 //========== Layout
-.m{
-  &-auto{
-    margin: auto !important;
-  }
-  &-0{
-    margin: 0 !important;
-  }
-  &-1{
-    margin: 1rem !important;
-  }
-  &-2{
-    margin: 2rem !important;
-  }
-  &-3{
-    margin: 3rem !important;
-  }
-  &-4{
-    margin: 4rem !important;
-  }
-  &-5{
-    margin: 5rem !important;
-  }
-
-  &-l{
-    &-auto{
-      margin-left: auto !important;
+@mixin auto-5($amount) {
+  .m {
+    &-#{$amount} {
+      margin: #{$amount}rem !important;
     }
-    &-0{
-      margin-left: 0 !important;
+    &-l-#{$amount} {
+      margin-left: #{$amount}rem !important;
     }
-    &-1{
-      margin-left: 1rem !important;
+    &-r-#{$amount} {
+      margin-right: #{$amount}rem !important;
     }
-    &-2{
-      margin-left: 2rem !important;
+    &-b-#{$amount} {
+      margin-bottom: #{$amount}rem !important;
     }
-    &-3{
-      margin-left: 3rem !important;
-    }
-    &-4{
-      margin-left: 4rem !important;
-    }
-    &-5{
-      margin-left: 5rem !important;
+    &-t-#{$amount} {
+      margin-top: #{$amount}rem !important;
     }
   }
-  &-t{
-    &-auto{
-      margin-top: auto !important;
+  .p {
+    &-#{$amount} {
+      padding: #{$amount}rem !important;
     }
-    &-0{
-      margin-top: 0 !important;
+    &-l-#{$amount} {
+      padding-left: #{$amount}rem !important;
     }
-    &-1{
-      margin-top: 1rem !important;
+    &-r-#{$amount} {
+      padding-right: #{$amount}rem !important;
     }
-    &-2{
-      margin-top: 2rem !important;
+    &-b-#{$amount} {
+      padding-bottom: #{$amount}rem !important;
     }
-    &-3{
-      margin-top: 3rem !important;
-    }
-    &-4{
-      margin-top: 4rem !important;
-    }
-    &-5{
-      margin-top: 5rem !important;
+    &-t-#{$amount} {
+      padding-top: #{$amount}rem !important;
     }
   }
-  &-r{
-    &-auto{
-      margin-right: auto !important;
+  .b {
+    &-#{$amount} {
+      border: solid #{$amount}px var(--border-color) !important;
     }
-    &-0{
-      margin-right: 0 !important;
+    &-t-#{$amount} {
+      border-top: solid #{$amount}px var(--border-color) !important;
     }
-    &-1{
-      margin-right: 1rem !important;
+    &-l-#{$amount} {
+      border-left: solid #{$amount}px var(--border-color) !important;
     }
-    &-2{
-      margin-right: 2rem !important;
+    &-r-#{$amount} {
+      border-right: solid #{$amount}px var(--border-color) !important;
     }
-    &-3{
-      margin-right: 3rem !important;
-    }
-    &-4{
-      margin-right: 4rem !important;
-    }
-    &-5{
-      margin-right: 5rem !important;
-    }
-  }
-  &-b{
-    &-auto{
-      margin-bottom: auto !important;
-    }
-    &-0{
-      margin-bottom: 0 !important;
-    }
-    &-1{
-      margin-bottom: 1rem !important;
-    }
-    &-2{
-      margin-bottom: 2rem !important;
-    }
-    &-3{
-      margin-bottom: 3rem !important;
-    }
-    &-4{
-      margin-bottom: 4rem !important;
-    }
-    &-5{
-      margin-bottom: 5rem !important;
+    &-b-#{$amount} {
+      border-bottom: solid #{$amount}px var(--border-color) !important;
     }
   }
 }
-.p{
-  &-auto{
-    padding: auto !important;
-  }
-  &-0{
-    padding: 0 !important;
-  }
-  &-1{
-    padding: 1rem !important;
-  }
-  &-2{
-    padding: 2rem !important;
-  }
-  &-3{
-    padding: 3rem !important;
-  }
-  &-4{
-    padding: 4rem !important;
-  }
-  &-5{
-    padding: 5rem !important;
-  }
-
-  &-l{
-    &-auto{
-      padding-left: auto !important;
-    }
-    &-0{
-      padding-left: 0 !important;
-    }
-    &-1{
-      padding-left: 1rem !important;
-    }
-    &-2{
-      padding-left: 2rem !important;
-    }
-    &-3{
-      padding-left: 3rem !important;
-    }
-    &-4{
-      padding-left: 4rem !important;
-    }
-    &-5{
-      padding-left: 5rem !important;
-    }
-  }
-
-  &-t{
-    &-auto{
-      padding-top: auto !important;
-    }
-    &-0{
-      padding-top: 0 !important;
-    }
-    &-1{
-      padding-top: 1rem !important;
-    }
-    &-2{
-      padding-top: 2rem !important;
-    }
-    &-3{
-      padding-top: 3rem !important;
-    }
-    &-4{
-      padding-top: 4rem !important;
-    }
-    &-5{
-      padding-top: 5rem !important;
-    }
-  }
-
-  &-r{
-    &-auto{
-      padding-right: auto !important;
-    }
-    &-0{
-      padding-right: 0 !important;
-    }
-    &-1{
-      padding-right: 1rem !important;
-    }
-    &-2{
-      padding-right: 2rem !important;
-    }
-    &-3{
-      padding-right: 3rem !important;
-    }
-    &-4{
-      padding-right: 4rem !important;
-    }
-    &-5{
-      padding-right: 5rem !important;
-    }
-  }
-
-  &-b{
-    &-auto{
-      padding-bottom: auto !important;
-    }
-    &-0{
-      padding-bottom: 0 !important;
-    }
-    &-1{
-      padding-bottom: 1rem !important;
-    }
-    &-2{
-      padding-bottom: 2rem !important;
-    }
-    &-3{
-      padding-bottom: 3rem !important;
-    }
-    &-4{
-      padding-bottom: 4rem !important;
-    }
-    &-5{
-      padding-bottom: 5rem !important;
-    }
+@include auto-5(auto);
+@for $i from 0 through 5 {
+  @include auto-5($i);
+}
+@mixin display($display) {
+  .d-#{$display} {
+    display: #{$display};
+    gap: 0.5rem;
   }
 }
-.border{
-  &-0{
-    border: 0 !important;
-  }
-  &-1{
-    border: solid 1px var(--border-color) !important;
-  }
-  &-2{
-    border: solid 2px var(--border-color) !important;
-  }
-  &-3{
-    border: solid 3px var(--border-color) !important;
-  }
-  &-4{
-    border: solid 4px var(--border-color) !important;
-  }
-  &-5{
-    border: solid 5px var(--border-color) !important;
-  }
+@include display(flex);
+@include display(grid);
 
-  &-l{
-    &-0{
-      border-left: 0 !important;
-    }
-    &-1{
-      border-left: solid 1px var(--border-color) !important;
-    }
-    &-2{
-      border-left: solid 2px var(--border-color) !important;
-    }
-    &-3{
-      border-left: solid 3px var(--border-color) !important;
-    }
-    &-4{
-      border-left: solid 4px var(--border-color) !important;
-    }
-    &-5{
-      border-left: solid 5px var(--border-color) !important;
-    }
-  }
-  &-r{
-    &-0{
-      border-right: 0 !important;
-    }
-    &-1{
-      border-right: solid 1px var(--border-color) !important;
-    }
-    &-2{
-      border-right: solid 2px var(--border-color) !important;
-    }
-    &-3{
-      border-right: solid 3px var(--border-color) !important;
-    }
-    &-4{
-      border-right: solid 4px var(--border-color) !important;
-    }
-    &-5{
-      border-right: solid 5px var(--border-color) !important;
-    }
-  }
-  &-t{
-    &-0{
-      border-top: 0 !important;
-    }
-    &-1{
-      border-top: solid 1px var(--border-color) !important;
-    }
-    &-2{
-      border-top: solid 2px var(--border-color) !important;
-    }
-    &-3{
-      border-top: solid 3px var(--border-color) !important;
-    }
-    &-4{
-      border-top: solid 4px var(--border-color) !important;
-    }
-    &-5{
-      border-top: solid 5px var(--border-color) !important;
-    }
-  }
-  &-b{
-    &-0{
-      border-bottom: 0 !important;
-    }
-    &-1{
-      border-bottom: solid 1px var(--border-color) !important;
-    }
-    &-2{
-      border-bottom: solid 2px var(--border-color) !important;
-    }
-    &-3{
-      border-bottom: solid 3px var(--border-color) !important;
-    }
-    &-4{
-      border-bottom: solid 4px var(--border-color) !important;
-    }
-    &-5{
-      border-bottom: solid 5px var(--border-color) !important;
-    }
-  }
-
-  &-color{
-    &-primary{ border-color: var(--primary-color-hover) !important; }
-    &-secondary{ border-color: var(--secondary-color-hover) !important; }
-    &-success{ border-color: var(--success-color-hover) !important; }
-    &-danger{ border-color: var(--danger-color-hover) !important; }
-    &-warning{ border-color: var(--warning-color-hover) !important; }
-    &-info{ border-color: var(--info-color-hover) !important; }
-    &-light{ border-color: var(--light-color-hover) !important; }
-    &-dark{ border-color: var(--dark-color-hover) !important; }
-  }
-}
-.box{
+// Box (div)
+.box {
   padding: 1rem;
-  &-rounded{
+  &-rounded {
     border-radius: var(--border-radius);
   }
-  &-shadow{
+  &-shadow {
     box-shadow: var(--box-shadow);
   }
 }
+// Container almost same as bootstrap
 .container {
-  max-width: 1100px;
+  max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
-  &-fluid{
+  &-fluid {
     width: 100%;
   }
 }
-.d{
-  &-flex{
-    display: flex;
-    gap: .5rem;
-  }
-  &-grid{
-    display: grid;
-    gap: .5rem;
-  }
+// For different page components
+.section {
+  padding: 6rem 0.5rem 2rem;
 }
-.flex{
-  &-dir{
-    &-row{
+// For Admin Panels (sidepanel-main)
+.body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+}
+.main{
+  overflow-y: auto;
+}
+
+// Alignments
+.flex {
+  &-dir {
+    &-row {
       flex-direction: row;
     }
-    &-column{
+    &-column {
       flex-direction: column;
     }
   }
-  &-wrap{
+  &-wrap {
     flex-wrap: wrap;
   }
-  &-noshrink{
+  &-noshrink {
     flex-shrink: 0;
   }
-  &-nogrow{
+  &-nogrow {
     flex-grow: 0;
   }
 }
-.justify-content{
-  &-center{
+.content {
+  &-center {
     justify-content: center;
   }
-  &-start{
+  &-start {
     justify-content: flex-start;
   }
-  &-end{
+  &-end {
     justify-content: flex-end;
   }
-  &-space{
-    &-between{
+  &-space {
+    &-between {
       justify-content: space-between;
     }
-    &-around{
+    &-around {
       justify-content: space-around;
     }
   }
 }
-.align-items{
-  &-center{
+.items {
+  &-center {
     align-items: center;
   }
-  &-start{
+  &-start {
     align-items: flex-start;
   }
-  &-end{
+  &-end {
     align-items: flex-end;
   }
 }
-.text{
-  &-align{
-    &-center{
-      text-align: center !important;
-    }
-    &-left{
-      text-align: left !important;
-    }
-    &-right{
-      text-align: right !important;
-    }
+.text {
+  &-center {
+    text-align: center !important;
+  }
+  &-left {
+    text-align: left !important;
+  }
+  &-right {
+    text-align: right !important;
+  }
+}
+
+// Grid Options
+@mixin grid-col-row($value, $span) {
+  .row-#{$value} {
+    grid-row: #{$value};
+  }
+  .row-#{$value}-span-#{$span} {
+    grid-row: #{$value} / span #{$span};
+  }
+  .col-#{$value} {
+    grid-column: #{$value};
+  }
+  .col-#{$value}-span-#{$span} {
+    grid-column: #{$value} / span #{$span};
+  }
+}
+@for $value from 1 through 10 {
+  @for $span from 1 through 10 {
+    @include grid-col-row($value, $span);
+  }
+}
+
+@mixin grid-reapeat($value){
+  .cols-#{$value} {
+    grid-template-columns: repeat($value, 1fr);
   }
 }
 
 //========== Colors
-.bg{
-  &-primary{
-    background-color: var(--primary-color) !important;
-    &-darker{
-      background-color: var(--primary-color-hover) !important;
+@mixin color($color) {
+  .bg-#{$color} {
+    background-color: var(--#{$color}-color) !important;
+    &-darker {
+      background-color: var(--#{$color}-color-hover) !important;
     }
   }
-  &-secondary{
-    background-color: var(--secondary-color) !important;
-    &-darker{
-      background-color: var(--secondary-color-hover) !important;
+  .hover-#{$color}:hover {
+    background-color: var(--#{$color}-color-hover);
+  }
+  .text-#{$color} {
+    color: var(--#{$color}-color) !important;
+  }
+  .link-#{$color} {
+    color: var(--#{$color}-color);
+    &:hover {
+      color: var(--#{$color}-color-hover);
     }
   }
-  &-success{
-    background-color: var(--success-color) !important;
-    &-darker{
-      background-color: var(--success-color-hover) !important;
-    }
+  .b-color-#{$color} {
+    border-color: var(--#{$color}-color-hover) !important;
   }
-  &-danger{
-    background-color: var(--danger-color) !important;
-    &-darker{
-      background-color: var(--danger-color-hover) !important;
-    }
-  }
-  &-warning{
-    background-color: var(--warning-color) !important;
-    &-darker{
-      background-color: var(--warning-color-hover) !important;
-    }
-  }
-  &-info{
-    background-color: var(--info-color) !important;
-    &-darker{
-      background-color: var(--info-color-hover) !important;
-    }
-  }
-  &-light{
-    background-color: var(--light-color) !important;
-    &-darker{
-      background-color: var(--light-color-hover) !important;
-    }
-  }
-  &-dark{
-    background-color: var(--dark-color) !important;
-    &-darker{
-      background-color: var(--dark-color-hover) !important;
-    }
+  .alert-#{$color} {
+    color: var(--#{$color}-alert-dark);
+    background-color: var(--#{$color}-alert);
+    border: 1px solid var(--#{$color}-alert-dark);
   }
 }
-.hover{
-  &-primary:hover{
-    background-color: var(--primary-color-hover);
-  }
-  &-secondary:hover{
-    background-color: var(--secondary-color-hover);
-  }
-  &-success:hover{
-    background-color: var(--success-color-hover);
-  }
-  &-danger:hover{
-    background-color: var(--danger-color-hover);
-  }
-  &-warning:hover{
-    background-color: var(--warning-color-hover);
-  }
-  &-info:hover{
-    background-color: var(--info-color-hover);
-  }
-  &-light:hover{
-    background-color: var(--light-color-hover);
-  }
-  &-dark:hover{
-    background-color: var(--dark-color-hover);
-  }
-}
-.text{
-  &-primary{
-    color: var(--primary-color) !important;
-  }
-  &-secondary{
-    color: var(--secondary-color) !important;
-  }
-  &-success{
-    color: var(--success-color) !important;
-  }
-  &-danger{
-    color: var(--danger-color) !important;
-  }
-  &-warning{
-    color: var(--warning-color) !important;
-  }
-  &-info{
-    color: var(--info-color) !important;
-  }
-  &-light{
-    color: var(--light-color) !important;
-  }
-  &-dark{
-    color: var(--dark-color) !important;
-  }
-}
-.link{
-  &-primary{
-    color: var(--primary-color);
-    &:hover{
-      color: var(--primary-color-hover);
-    }
-  }
-  &-secondary{
-    color: var(--secondary-color);
-    &:hover{
-      color: var(--secondary-color-hover);
-    }
-  }
-  &-success{
-    color: var(--success-color);
-    &:hover{
-      color: var(--success-color-hover);
-    }
-  }
-  &-danger{
-    color: var(--danger-color);
-    &:hover{
-      color: var(--danger-color-hover);
-    }
-  }
-  &-warning{
-    color: var(--warning-color);
-    &:hover{
-      color: var(--warning-color-hover);
-    }
-  }
-  &-info{
-    color: var(--info-color);
-    &:hover{
-      color: var(--info-color-hover);
-    }
-  }
-  &-light{
-    color: var(--light-color);
-    &:hover{
-      color: var(--light-color-hover);
-    }
-  }
-  &-dark{
-    color: var(--dark-color);
-    &:hover{
-      color: var(--dark-color-hover);
-    }
-  }
-}
+@include color(primary);
+@include color(secondary);
+@include color(success);
+@include color(danger);
+@include color(warning);
+@include color(info);
+@include color(light);
+@include color(dark);
 
-//========== Shadow
-.box-shadow{
+//========== Shadows
+.box-shadow {
   box-shadow: var(--box-shadow);
 }
-.neumorphic{
+.neumorphic {
   background-color: hsla(0, 0%, 100%, 5%);
-  box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 10%), -5px -5px 10px hsla(0, 0%, 100%, 10%);
+  box-shadow: var(--body-neumor);
 }
 
 //========== Typography
-.title{
+.title {
   width: 100%;
   font-size: var(--font-big);
   text-align: center;
 }
-.section{
+.section {
   &-title {
     font-size: var(--h1-size);
     text-align: center;
@@ -656,76 +292,73 @@ img {
     text-align: center;
   }
 }
-.heading{
+.heading {
   font-size: var(--h2-size);
   text-align: center;
 }
-.subheading{
+.subheading {
   font-size: var(--h3-size);
   text-align: center;
 }
 
-
 //========== Components
-.section {
-  padding: 6rem 0 2rem;
-}
 .btn {
   display: inline-block;
   color: var(--light-color);
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   font-size: var(--font-size);
   font-weight: var(--font-medium);
-  border: 0; outline: 0;
+  border: 0;
+  outline: 0;
   cursor: pointer;
 
-  &-primary{
+  &-primary {
     background-color: var(--primary-color);
-    &:hover{
+    &:hover {
       background-color: var(--primary-color-hover);
     }
   }
-  &-secondary{
+  &-secondary {
     background-color: var(--secondary-color);
-    &:hover{
+    &:hover {
       background-color: var(--secondary-color-hover);
     }
   }
-  &-success{
+  &-success {
     background-color: var(--success-color);
-    &:hover{
+    &:hover {
       background-color: var(--success-color-hover);
     }
   }
-  &-danger{
+  &-danger {
     background-color: var(--danger-color);
-    &:hover{
+    &:hover {
       background-color: var(--danger-color-hover);
     }
   }
-  &-warning{
+  &-warning {
     background-color: var(--warning-color);
-    &:hover{
+    &:hover {
       background-color: var(--warning-color-hover);
     }
   }
-  &-info{
+  &-info {
     background-color: var(--info-color);
-    &:hover{
+    &:hover {
       background-color: var(--info-color-hover);
     }
   }
-  &-light{
+  &-light {
     color: var(--dark-color);
     background-color: var(--light-color);
-    &:hover{
+    &:hover {
       background-color: var(--light-color-hover);
     }
   }
-  &-dark{
+  &-dark {
     background-color: var(--dark-color);
-    &:hover{
+    &:hover {
       background-color: var(--dark-color-hover);
     }
   }
@@ -733,14 +366,14 @@ img {
     box-shadow: var(--box-shadow-inset);
   }
 
-  &-group{
+  &-group {
     border-radius: 0.5rem;
     overflow: hidden;
     width: max-content;
-    .btn{
+    .btn {
       border-radius: 0;
     }
-    &:hover{
+    &:hover {
       box-shadow: var(--box-shadow);
     }
   }
@@ -751,77 +384,57 @@ img {
   }
   &-flex {
     display: inline-flex;
-    align-items: center;
+    items: center;
   }
-
 }
-// .form{
-
-//   &-label{
-//     font-size: var(--font-small);
-//     color: var(--title-color);
-//   }
-//   &-input{
-//     width: 100%;
-//     background-color: var(--input-color);
-//     color: var(--text-color);
-//     font-family: var(--font-family);
-//     font-size: var(--font-size);
-//     border: none; outline: none;
-//     padding: .25rem .5rem .5rem 0;
-//   }
-
-
-//   // Remove input type number arrows
-//   /* Chrome, Safari, Edge, Opera */
-//   input::-webkit-outer-spin-button,
-//   input::-webkit-inner-spin-button {
-//     -webkit-appearance: none;
-//     margin: 0;
-//   }
-//   /* Firefox */
-//   input[type=number] {
-//     -moz-appearance: textfield;
-//   }
-// }
-.alert{
+.alert {
+  position: fixed;
+  top: 0; right: 0;
   display: block;
   padding: 1rem;
-  border-radius: 0.5rem;
-  margin-bottom: 0.5rem;
-
-  &-red{
-    background-color: rgba(255, 0, 0, 0.3);
-    border: 1px solid rgba(255, 0, 0, 0.5);
-  }
+  border-radius: var(--border-radius);
 }
 
-.ng-dropdown-panel-items{
+// ng-select class changes
+.ng-dropdown-panel-items {
   background-color: var(--input-color);
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
-  .ng-option{
+  .ng-option {
     padding: 1rem;
-    &:hover, &-selected{
-      background-color: rgba(255,255,255, 0.5);
+    &:hover,
+    &-selected {
+      background-color: rgba(255, 255, 255, 0.5);
     }
   }
 }
 
-@media screen and (max-width: 768px) {
+
+
+//========== Breakpoints
+@media screen and (max-width: 1800px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
   .container {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
   }
+}
+
+@media screen and (max-width: 768px) {
   .section {
     padding: 2rem 0 4rem;
     &-subtitle {
       margin-bottom: 3rem;
     }
   }
-  .form{
+  .form {
     width: auto;
-    &-inputs{
+    &-inputs {
       grid-template-columns: 1fr;
     }
   }

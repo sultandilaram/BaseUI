@@ -41,7 +41,8 @@
 
   --border-color: hsl(0, 0%, 79%);
   --input-color: hsl(var(--hue-color), 70%, 96%);
-  --body-color: hsl(var(--hue-color), 0%, 99%);
+  --body-color: hsl(var(--hue-color), 0%, 97%);
+  --body-color-light: hsl(var(--hue-color), 0%, 99%);
   --container-color: #fff;
 
   body.dark {
@@ -56,10 +57,11 @@
 
   --box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.25);
   --box-shadow-inset: inset 0px 0px 10px 0px hsla(0, 0%, 0%, 0.25);
+  --box-shadow-inset-light: inset 0px 0px 5px 0px hsla(0, 0%, 0%, 0.15);
   --card-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 5px rgba(0,0,0,0.24);
 
-  --body-neumor-inset: inset 5px 5px 10px hsl(var(--hue-color), 26%, 7%),
-    inset -5px -5px 10px hsl(var(--hue-color), 29%, 16%);
+  --body-neumor: 5px 5px 10px hsla(0, 0%, 0%, 10%), -5px -5px 10px hsla(0, 0%, 100%, 10%);
+  --body-neumor-inset: inset 5px 5px 10px hsla(0, 0%, 0%, 10%), inset -5px -5px 10px hsla(0, 0%, 100%, 10%);
   --body-neumor-high: 5px 5px 10px hsl(var(--hue-color), 28%, 5%),
     -5px -5px 10px hsl(var(--hue-color), 28%, 19%);
 

@@ -5,7 +5,7 @@ import { ModalHeaderComponent } from './modal-header.component';
 @Component({
   selector: 'modal',
   template: `
-    <div class="modal-base d-flex justify-content-center align-items-center" [@fade]="modal_state?'final':'initial'">
+    <div class="modal-base d-flex content-center items-center" [@fade]="modal_state?'final':'initial'">
       <div class="modal-container container box-rounded b-1 bg-light">
         <ng-content select="modal-header"></ng-content>
         <ng-content select="modal-body"></ng-content>
