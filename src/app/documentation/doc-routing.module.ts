@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ColorsComponent } from './colors/colors.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
+import { DropdownsComponent } from './components/dropdowns/dropdowns.component';
 import { DocumentationComponent } from './documentation.component';
 import { HomeComponent } from './home/home.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
       { path: 'components', children: [
         {path: 'accordions', component: AccordionComponent},
         {path: 'buttons', component: ButtonsComponent},
+        {path: 'dropdowns', component: DropdownsComponent},
       ]}
     ],
   },

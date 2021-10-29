@@ -52,7 +52,7 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
           }
         }
         &-dropdown{
-          background-color: var(--body-color-light);
+          background-color: var(--body-color-alt);
           box-shadow: var(--box-shadow-inset-light);
         }
       }

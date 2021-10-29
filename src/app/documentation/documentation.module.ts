@@ -10,6 +10,8 @@ import { TypographyComponent } from './typography/typography.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { AccordionModule } from '../modules/accordion/accordion.module';
+import { DropdownsComponent } from './components/dropdowns/dropdowns.component';
+import { DropdownModule } from '../modules/dropdown/dropdown.module';
 
 
 
@@ -21,13 +23,15 @@ import { AccordionModule } from '../modules/accordion/accordion.module';
     ColorsComponent,
     TypographyComponent,
     AccordionComponent,
-    ButtonsComponent
+    ButtonsComponent,
+    DropdownsComponent
   ],
   imports: [
     CommonModule,
     DocRoutingModule,
     SidebarModule,
-    AccordionModule
+    AccordionModule,
+    DropdownModule
   ]
 })
 export class DocumentationModule { }
