@@ -5,14 +5,14 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'sidebar-dropdown',
   template: `
     <li
       class="nav-item box"
-      (click)="toggle()"
+      (click)="toggleEmit()"
     >
       <div class="mask"></div>
       <div class="data d-flex content-space-between">
@@ -64,7 +64,10 @@ import { Component, Input, OnInit } from '@angular/core';
   ],
 })
 export class SidebarDropdownComponent implements OnInit {
+
   @Input() label: string;
+
+  @Output() toggleEvent = new EventEmitter<string>()
 
   show: boolean = false;
 
@@ -72,7 +75,7 @@ export class SidebarDropdownComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  toggle() {
-    this.show = !this.show;
+  toggleEmit() {
+    this.toggleEvent.emit(this.label);
   }
 }

@@ -1,4 +1,5 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ContentChildren, Input, AfterContentInit, QueryList, ViewEncapsulation } from '@angular/core';
+import { SidebarDropdownComponent } from './sidebar-dropdown.component';
 
 @Component({
   selector: 'sidebar',
@@ -61,10 +62,28 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent implements AfterContentInit {
   @Input() title: string;
+  @ContentChildren(SidebarDropdownComponent) dropdowns: QueryList<SidebarDropdownComponent>;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngAfterContentInit(): void {
+    this.dropdowns.forEach((element: SidebarDropdownComponent) => {
+      element.toggleEvent.subscribe((event) => {
+        if (element.show == true) {
+          element.show = false;
+        } else {
+          this.closeDropdowns();
+          element.show = true;
+        }
+      });
+    });
+  }
+
+  closeDropdowns() {
+    this.dropdowns.forEach((element:SidebarDropdownComponent) => {
+      element.show = false;
+    });
+  }
 }
