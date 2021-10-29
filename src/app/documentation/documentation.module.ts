@@ -9,6 +9,7 @@ import { ColorsComponent } from './colors/colors.component';
 import { TypographyComponent } from './typography/typography.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
+import { AccordionModule } from '../modules/accordion/accordion.module';
 
 
 
@@ -25,7 +26,8 @@ import { ButtonsComponent } from './components/buttons/buttons.component';
   imports: [
     CommonModule,
     DocRoutingModule,
-    SidebarModule
+    SidebarModule,
+    AccordionModule
   ]
 })
 export class DocumentationModule { }

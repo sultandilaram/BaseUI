@@ -17,7 +17,7 @@ const routes: Routes = [
       { path: 'colors', component: ColorsComponent },
       { path: 'typography', component: TypographyComponent },
       { path: 'components', children: [
-        {path: 'accordions', component: AccordionComponent}
+        {path: 'accordions', component: AccordionComponent},
       ]}
     ],
   },
