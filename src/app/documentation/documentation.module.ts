@@ -5,6 +5,10 @@ import { DocRoutingModule } from './doc-routing.module';
 import { SidebarModule } from '../modules/sidebar/sidebar.module';
 import { HomeComponent } from './home/home.component';
 import { LayoutComponent } from './layout/layout.component';
+import { ColorsComponent } from './colors/colors.component';
+import { TypographyComponent } from './typography/typography.component';
+import { AccordionComponent } from './components/accordion/accordion.component';
+import { ButtonsComponent } from './components/buttons/buttons.component';
 
 
 
@@ -12,7 +16,11 @@ import { LayoutComponent } from './layout/layout.component';
   declarations: [
     DocumentationComponent,
     HomeComponent,
-    LayoutComponent
+    LayoutComponent,
+    ColorsComponent,
+    TypographyComponent,
+    AccordionComponent,
+    ButtonsComponent
   ],
   imports: [
     CommonModule,

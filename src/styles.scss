@@ -215,16 +215,19 @@ img {
     grid-column: #{$value} / span #{$span};
   }
 }
-@for $value from 1 through 10 {
-  @for $span from 1 through 10 {
+@for $value from 1 through 12 {
+  @for $span from 1 through 12 {
     @include grid-col-row($value, $span);
   }
 }
 
-@mixin grid-reapeat($value){
+@mixin grid-repeat($value){
   .cols-#{$value} {
     grid-template-columns: repeat($value, 1fr);
   }
+}
+@for $value from 1 through 12 {
+  @include grid-repeat($value);
 }
 
 //========== Colors
@@ -236,7 +239,7 @@ img {
     }
   }
   .hover-#{$color}:hover {
-    background-color: var(--#{$color}-color-hover);
+    background-color: var(--#{$color}-color-hover) !important;
   }
   .text-#{$color} {
     color: var(--#{$color}-color) !important;
@@ -270,7 +273,7 @@ img {
   box-shadow: var(--box-shadow);
 }
 .neumorphic {
-  background-color: hsla(0, 0%, 100%, 5%);
+  background-color: hsla(0, 0%, 100%, 1%);
   box-shadow: var(--body-neumor);
 }
 
