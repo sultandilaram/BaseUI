@@ -253,6 +253,12 @@ img {
   .b-color-#{$color} {
     border-color: var(--#{$color}-color-hover) !important;
   }
+  .btn-#{$color} {
+    background-color: var(--#{$color}-color) !important;
+    &:hover {
+      background-color: var(--#{$color}-color-hover) !important;
+    }
+  }
   .alert-#{$color} {
     color: var(--#{$color}-alert-dark);
     background-color: var(--#{$color}-alert);
@@ -316,54 +322,11 @@ img {
   outline: 0;
   cursor: pointer;
 
-  &-primary {
-    background-color: var(--primary-color);
-    &:hover {
-      background-color: var(--primary-color-hover);
-    }
-  }
-  &-secondary {
-    background-color: var(--secondary-color);
-    &:hover {
-      background-color: var(--secondary-color-hover);
-    }
-  }
-  &-success {
-    background-color: var(--success-color);
-    &:hover {
-      background-color: var(--success-color-hover);
-    }
-  }
-  &-danger {
-    background-color: var(--danger-color);
-    &:hover {
-      background-color: var(--danger-color-hover);
-    }
-  }
-  &-warning {
-    background-color: var(--warning-color);
-    &:hover {
-      background-color: var(--warning-color-hover);
-    }
-  }
-  &-info {
-    background-color: var(--info-color);
-    &:hover {
-      background-color: var(--info-color-hover);
-    }
-  }
-  &-light {
+  &-light{
     color: var(--dark-color);
-    background-color: var(--light-color);
-    &:hover {
-      background-color: var(--light-color-hover);
-    }
   }
-  &-dark {
-    background-color: var(--dark-color);
-    &:hover {
-      background-color: var(--dark-color-hover);
-    }
+  &-block{
+    width: 100%;
   }
   &:active {
     box-shadow: var(--box-shadow-inset);
@@ -387,7 +350,7 @@ img {
   }
   &-flex {
     display: inline-flex;
-    items: center;
+    align-items: center;
   }
 }
 .alert {
