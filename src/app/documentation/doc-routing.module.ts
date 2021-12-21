@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ColorsComponent } from './colors/colors.component';
-import { AccordionComponent } from './components/accordion/accordion.component';
-import { ButtonsComponent } from './components/buttons/buttons.component';
-import { CardsComponent } from './components/cards/cards.component';
-import { DropdownsComponent } from './components/dropdowns/dropdowns.component';
-import { ModalComponent } from './components/modal/modal.component';
+import { ColorsComponent } from './pages/colors.component';
+import { AccordionComponent } from './pages/components/accordion.component';
+import { ButtonsComponent } from './pages/components/buttons.component';
+import { CardsComponent } from './pages/components/cards.component';
+import { DropdownsComponent } from './pages/components/dropdowns.component';
+import { ModalComponent } from './pages/components/modal.component';
 import { DocumentationComponent } from './documentation.component';
-import { HomeComponent } from './home/home.component';
-import { LayoutComponent } from './layout/layout.component';
-import { TypographyComponent } from './typography/typography.component';
+import { InputsComponent } from './pages/forms/inputs.component';
+import { HomeComponent } from './pages/home.component';
+import { LayoutComponent } from './pages/layout.component';
+import { TypographyComponent } from './pages/typography.component';
 
 const routes: Routes = [
   {
@@ -26,7 +27,10 @@ const routes: Routes = [
         {path: 'dropdowns', component: DropdownsComponent},
         {path: 'cards', component: CardsComponent},
         {path: 'modal', component: ModalComponent},
-      ]}
+      ]},
+      { path: 'forms', children: [
+        {path: 'inputs', component: InputsComponent},
+      ]},
     ],
   },
 ];

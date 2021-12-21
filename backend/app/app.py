@@ -1,7 +1,11 @@
-from database import SessionLocal
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
+from . import models, schemas
+from .database import engine, SessionLocal
 from common import auth
+
+# Uncomment to migrate
+# models.Base.metadata.create_all(engine)
 
 # Static
 app = FastAPI()
@@ -16,6 +20,4 @@ db = SessionLocal()
 
 app.include_router(auth.router)
 
-@app.get('/')
-async def home(token: str = Depends(auth.oauth2_scheme)):
-   return { "token": token }
+

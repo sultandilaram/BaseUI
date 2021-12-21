@@ -1,10 +1,10 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
+  selector: 'navbar',
   template: `
-    <header class="header box-shadow">
-      <nav class="nav container">
+    <header class="header {{fixed_class}} box-shadow p-1">
+      <nav class="nav container d-flex content-space-between items-center">
         <a routerLink="/" *ngIf="navBrand" class="nav-logo">{{ navBrand }}</a>
         <div class="nav-menu" #navMenu>
           <ul class="nav-list grid">
@@ -12,8 +12,9 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
           </ul>
           <i class="uil uil-times nav-close" (click)="toggleMenu(navMenu)"></i>
         </div>
-        <div class="nav-toggle" (click)="toggleMenu(navMenu)">
-          <i class="uil uil-apps"></i>
+        <div class="d-flex">
+          <i class="uil uil-{{theme_icon}} theme-change" *ngIf="themeChange" (click)="changeTheme()"></i>
+          <i class="uil uil-apps nav-toggle" (click)="toggleMenu(navMenu)"></i>
         </div>
       </nav>
     </header>
@@ -23,36 +24,36 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
       @import '../../../assets/scss/vars.scss';
       .header {
         width: 100%;
-        padding: 1rem;
         z-index: var(--z-fixed);
         background-color: var(--body-color);
-        position: fixed;
-        top: 0;
-        bottom: initial;
+
+        &-fixed {
+          position: fixed;
+          top: 0;
+          bottom: initial;
+        }
 
         .nav {
           height: var(--header-height);
           column-gap: 1rem;
-          display: flex;
-          justify-content: space-between;
-          items: center;
 
           &-menu {
             margin-left: auto;
           }
 
           &-logo,
-          &-toggle {
-            color: var(--title-color);
+          &-toggle,
+          .theme-change {
+            color: var(--text-color);
             font-weight: var(--font-medium);
             cursor: pointer;
             &:hover {
-              color: var(--primary-color);
+              color: var(--text-color-light);
             }
           }
-          &-toggle {
+          &-toggle,
+          .theme-change {
             font-size: 1.1rem;
-            cursor: pointer;
           }
           &-list {
             display: flex;
@@ -123,6 +124,7 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
               padding: 2rem 1.5rem 4rem;
               box-shadow: var(--box-shadow);
               transition: 0.3s;
+              z-index: var(--z-fixed);
 
               &.show {
                 right: 0;
@@ -140,16 +142,38 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Input() navBrand: string;
+  @Input() fixed: boolean
+  @Input() themeChange: boolean
+
+  fixed_class = ""
+
+  theme_icon = "moon"
+
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if(this.fixed){
+      this.fixed_class = "header-fixed"
+    }
+  }
 
   toggleMenu(menu: HTMLElement) {
     if (menu.classList.contains('show')) {
       menu.classList.remove('show');
     } else {
       menu.classList.add('show');
+    }
+  }
+
+  changeTheme(){
+    var body = document.getElementsByTagName('body')[0]
+    if(body.classList.contains('dark')){
+      body.classList.remove('dark')
+      this.theme_icon = "moon"
+    }else{
+      body.classList.add('dark')
+      this.theme_icon = "sun"
     }
   }
 }

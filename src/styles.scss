@@ -199,6 +199,17 @@ img {
     text-align: right !important;
   }
 }
+.self {
+  &-center{
+    justify-self: center;
+  }
+  &-start{
+    justify-self: flex-start;
+  }
+  &-end{
+    justify-self: flex-end;
+  }
+}
 
 // Grid Options
 @mixin grid-col-row($value, $span) {

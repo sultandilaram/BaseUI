@@ -6,7 +6,7 @@ import { ModalHeaderComponent } from './modal-header.component';
   selector: 'modal',
   template: `
     <div class="modal-base d-flex content-center items-center" [@fade]="modal_state?'final':'initial'">
-      <div class="modal-container container box-rounded b-1">
+      <div class="modal-container container box-rounded b-1" [@slideIn]="modal_state?'final':'initial'">
         <ng-content select="modal-header"></ng-content>
         <ng-content select="modal-body"></ng-content>
         <ng-content select="modal-footer"></ng-content>
@@ -60,6 +60,20 @@ import { ModalHeaderComponent } from './modal-header.component';
         })
       ),
       transition('initial<=>final', animate('200ms')),
+    ]),
+    trigger('slideIn', [
+      state(
+        'initial',
+        style({
+          top: '-100%',
+        })
+      ),
+      state(
+        'final',
+        style({
+        })
+      ),
+      transition('initial<=>final', animate('500ms')),
     ]),
   ]
 })

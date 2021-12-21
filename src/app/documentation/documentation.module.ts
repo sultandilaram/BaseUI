@@ -3,19 +3,22 @@ import { CommonModule } from '@angular/common';
 import { DocumentationComponent } from './documentation.component';
 import { DocRoutingModule } from './doc-routing.module';
 import { SidebarModule } from '../modules/sidebar/sidebar.module';
-import { HomeComponent } from './home/home.component';
-import { LayoutComponent } from './layout/layout.component';
-import { ColorsComponent } from './colors/colors.component';
-import { TypographyComponent } from './typography/typography.component';
-import { AccordionComponent } from './components/accordion/accordion.component';
-import { ButtonsComponent } from './components/buttons/buttons.component';
+import { HomeComponent } from './pages/home.component';
+import { LayoutComponent } from './pages/layout.component';
+import { ColorsComponent } from './pages/colors.component';
+import { TypographyComponent } from './pages/typography.component';
+import { AccordionComponent } from './pages/components/accordion.component';
+import { ButtonsComponent } from './pages/components/buttons.component';
 import { AccordionModule } from '../modules/accordion/accordion.module';
-import { DropdownsComponent } from './components/dropdowns/dropdowns.component';
+import { DropdownsComponent } from './pages/components/dropdowns.component';
 import { DropdownModule } from '../modules/dropdown/dropdown.module';
-import { CardsComponent } from './components/cards/cards.component';
+import { CardsComponent } from './pages/components/cards.component';
 import { CardsModule } from '../modules/cards/cards.module';
 import { ModalModule } from '../modules/modal/modal.module';
-import { ModalComponent } from './components/modal/modal.component';
+import { ModalComponent } from './pages/components/modal.component';
+import { InputsComponent } from './pages/forms/inputs.component';
+import { FormModule } from '../modules/form/form.module';
+import { HeaderModule } from '../modules/header/header.module';
 
 
 
@@ -30,7 +33,8 @@ import { ModalComponent } from './components/modal/modal.component';
     ButtonsComponent,
     DropdownsComponent,
     CardsComponent,
-    ModalComponent
+    ModalComponent,
+    InputsComponent
   ],
   imports: [
     CommonModule,
@@ -39,7 +43,9 @@ import { ModalComponent } from './components/modal/modal.component';
     AccordionModule,
     DropdownModule,
     CardsModule,
-    ModalModule
+    ModalModule,
+    FormModule,
+    HeaderModule
   ]
 })
 export class DocumentationModule { }

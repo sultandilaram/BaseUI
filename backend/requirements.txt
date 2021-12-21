@@ -2,7 +2,6 @@ fastapi
 uvicorn
 sqlalchemy
 psycopg2-binary
-sqlalchemy_imageattach
-MagickWand
 python-multipart
-fastapi_simple_security
+bcrypt
+python-jose[cryptography]
